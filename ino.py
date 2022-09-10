@@ -20,6 +20,6 @@ class Ino(pygame.sprite.Sprite):
         self.screen.blit(self.image, self.rect)
 
     def update(self):
-        """перемещение нло"""
+        """перемещение нло в новое место"""
         self.y += 0.1
         self.rect.y = self.y
