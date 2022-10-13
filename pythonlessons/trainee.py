@@ -13,6 +13,11 @@
 #     print("yep")
 # else:
 #     print("no")
+
+# dromes = ('demigod','rewire','madam','freer','anutforajaroftuna','kiosk')
+# palindromes = list(filter(lambda word: word == word[::1],dromes))
+# print(palindromes)
+
 """цикл для работы со вложенными списками(матрица)"""
 # for i in [[1,2,3],[4,5,6],[7,8,9]]:
 #     for j in i:
@@ -40,3 +45,5 @@
 #     else:
 #         print(i**3)
 """ """
+
+#
