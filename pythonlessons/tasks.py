@@ -167,3 +167,107 @@
 # new += string[-4:]
 # print(new)
 
+""" добавление чисел(чётных) в список кратных 
+двум(делёными на 2 без остатка)"""
+#
+# numbers = []
+# for i in range(1, 11):
+#     if i % 2 == 0:
+#         numbers.append(i)
+#
+"""(генераторы списков) запись чисел внутрь списка"""
+# numbers = [i for i in range(1,11)]
+# numbers = [i for i in range(1,11) if i % 2==0] #кратным 2м
+# print(numbers)
+"""создание матрицы"""
+
+# from  random import randint
+# n = 3
+# matrix = [[randint(1,9) for j in range(n)]for i in range(n)]
+# print(matrix)
+
+""" посчитать ко-во символов в ключе и 
+добавить в конце ключа число символов /
+ генератор словаря """
+#
+# a = {"wertrtyry": "2",
+#      "rwtf": "55",
+#      "ratrtyy": "17"
+#      }
+#
+# a2 = {}
+# for i in a:
+#     a2[i + str(len(i))] = a[i]  # добавляем в новый словарь ключи+ к-во символов к ним
+#
+# print(a2)
+#
+# a3 = {i + str(len(i)): a[i] for i in a}
+# print(a3)
+# # {key: value for item in list if conditional} конструкция генераторы словаря
+
+"""(задача с реального проекта)таблица ключи - название колонки,
+ значение - тип данных колонки(список колонок--вернуть словарь 
+ который содержит конкретные колонки и тип данных которые они хранят
+ 3 ключа - 3 значения ключей"""
+
+# D = {"integer":'int',"string":'str',"tuple":'tpl',"set":'set', "dicttionary":'dict',"list":'list',"Boolean":'bool'}
+# lst = ["integer", "string", "list"]
+# Dict_new = {i:D[i] for i in D if i in lst}
+# print(Dict_new)
+
+"""ГЕНЕРАТОРЫ (yield- аналог return для генераторов)
+(next - обращение к следующему элементу) 
+возвращает значение но не хранит его/ удобны 
+когда известно что ф-ция вернёт большой набор значений, которые надо прочитать только 1 раз"""
+
+# mygenerator = (x*x for x in range(3)) # конструцкия
+
+# def create_generator():
+#     mylist = range(3)
+#     for i in mylist:
+#         yield i*i
+
+"""создание скриптов
+библиотека argparse-для упращения работы со скриптами"""
+#
+# import sys, argparse
+#
+# print(sys.argv)
+#
+# if "Pavel" in sys.argv:
+#     print("Hi, Pavel")
+# else:
+#     print("Who are you?")
+#
+# print(sys.argv)
+# parser = argparse.ArgumentParser()
+# parser.add_argument("-fn", "--first-name", required=True)
+# parser.add_argument("-ln", "--last-name", required=True)
+# parser.add_argument("echo")
+# args = parser.parse_args()
+# print(args)
+# print("First name:", args.first_name)
+# print("Last name:", args.last_name)
+# print("echo", args.echo)
+
+"""найти сумму с помощью генераторов"""
+
+#
+# def num(x):
+#     lists = list(str(x))
+#     d = [int(i) for i in lists]
+#     return sum(d)
+#
+#
+# n = 28340928374
+# print(num(n))
+"""поиск числа по индексу"""
+
+
+# def ind_3(a):
+#     return [i for i in range(len(a)) if a[i] == 3][2]
+#
+#
+# print(list(enumerate([1, 2, 3, 3, 3, 3])))
+# print(ind_3([1, 2, 3, 3, 3, 3]))
+
